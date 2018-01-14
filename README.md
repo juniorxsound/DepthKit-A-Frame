@@ -23,7 +23,7 @@ Where the ```type``` attribute support ```wire/points/mesh``` for rendering diff
 ### Advanced usage
 
 ## Contribute
-PR's are welcome ✊🏻 as I am not extremely familiar with the A-Frame ecosystem if you want to help make sure to clone using the ```git clone --recursive```.
+PR's are welcome ✊🏻 make sure to clone using the ```git clone --recursive```.
 
 ### Build system
 
