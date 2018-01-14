@@ -18,7 +18,8 @@ AFRAME.registerComponent('depthkit', {
     type: {type: 'string', default: 'mesh'},
     videoPath: {type: 'string'},
     metaPath: {type: 'string'},
-    loop: {type: 'boolean', default: true}
+    loop: {type: 'boolean', default: true},
+    autoplay: {type: 'boolean', default: true}
   },
 
   /**
@@ -33,14 +34,19 @@ AFRAME.registerComponent('depthkit', {
 
     //Create a depthkit instance
     character = new DepthKit(this.data.type,
-                                 this.data.metaPath,
-                                 this.data.videoPath);
+                             this.data.metaPath,
+                             this.data.videoPath);
 
     character.depthkit.setLoop(this.data.loop);
-    character.depthkit.play();
+    // character.depthkit.play();
 
     //Rotate it back to position
     character.rotation.z = THREE.Math.degToRad(90);
+
+    //If autoplay is on play the take
+    if(this.data.autoplay) character.depthkit.play();
+
+    this.Stop();
 
     //Set the Object3D
     this.el.setObject3D('mesh', character);
@@ -74,6 +80,7 @@ AFRAME.registerComponent('depthkit', {
    * Use to stop or remove any dynamic or background behavior such as events.
    */
   pause: function () {
+    character.depthkit.stop();
   },
 
   /**
@@ -81,5 +88,6 @@ AFRAME.registerComponent('depthkit', {
    * Use to continue or add any dynamic or background behavior such as events.
    */
   play: function () {
+    character.depthkit.play();
   }
 });
