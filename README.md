@@ -26,6 +26,5 @@ Where the ```type``` attribute support ```wire/points/mesh``` for rendering diff
 PRs are welcome ✊🏻 make sure to clone using the ```git clone --recursive```.
 
 ### Build system
-- Clone/Fork using ```--recursive``` flag to fetch submodules too
 - ```npm run start``` uses ```concurrently``` to start both an ```http-server``` and a ```watchify``` build opreation on every save to ```./dist/aframe.depthkit.js```
 - ```npm run build``` builds and minifies to ```./dist/aframe.depthkit.min.js```
