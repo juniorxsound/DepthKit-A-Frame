@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>A-Frame DepthKit</title>
+    <style>
+      html {
+        background: #000000;
+        color: #FAFAFA;
+        font-family: monospace;
+        font-size: 20px;
+        padding: 10px 20px;
+      }
+    </style>
+
+    <!-- A-Frame CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+
+    <!-- Relative bundle name -->
+    <script src="../dist/aframe.depthkit.js"></script>
+
+  </head>
+  <body>
+
+
+    <!-- Example A-Frame scene -->
+    <a-scene>
+
+      <!-- Example A-Frame DepthKit component initalization -->
+      <a-entity depthkit="type: wire;
+                          metaPath: ../ext/DepthKit/assets/Chae/Chae_Demo_Upres.txt;
+                          videoPath: ../ext/DepthKit/assets/Chae/Chae_Demo_Upres.webm;">
+      </a-entity>
+
+    </a-scene>
+
+  </body>
+</html>

@@ -1,0 +1,3 @@
+[submodule "ext/DepthKit"]
+	path = ext/DepthKit
+	url = git@github.com:juniorxsound/DepthKit.js.git
