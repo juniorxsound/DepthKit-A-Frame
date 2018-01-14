@@ -88,9 +88,6 @@ if (typeof AFRAME === 'undefined') {
   throw new Error('Component attempted to register before AFRAME was available.');
 }
 
-//Global character
-var character = void 0;
-
 //AFrame DepthKit.js wrapper entity
 AFRAME.registerComponent('depthkit', {
 
@@ -113,18 +110,15 @@ AFRAME.registerComponent('depthkit', {
   init: function init() {
 
     //Create a depthkit instance
-    character = new DepthKit(this.data.type, this.data.metaPath, this.data.videoPath);
-
+    var character = new DepthKit(this.data.type, this.data.metaPath, this.data.videoPath);
+    //Will it loop?
     character.depthkit.setLoop(this.data.loop);
-    // character.depthkit.play();
 
     //Rotate it back to position
     character.rotation.z = THREE.Math.degToRad(90);
 
     //If autoplay is on play the take
     if (this.data.autoplay) character.depthkit.play();
-
-    this.Stop();
 
     //Set the Object3D
     this.el.setObject3D('mesh', character);
@@ -156,17 +150,13 @@ AFRAME.registerComponent('depthkit', {
    * Called when entity pauses.
    * Use to stop or remove any dynamic or background behavior such as events.
    */
-  pause: function pause() {
-    character.depthkit.stop();
-  },
+  pause: function pause() {},
 
   /**
    * Called when entity resumes.
    * Use to continue or add any dynamic or background behavior such as events.
    */
-  play: function play() {
-    character.depthkit.play();
-  }
+  play: function play() {}
 });
 
 },{}]},{},[1]);

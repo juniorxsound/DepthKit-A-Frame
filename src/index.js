@@ -7,10 +7,6 @@ if (typeof AFRAME === 'undefined') {
   throw new Error('Component attempted to register before AFRAME was available.');
 }
 
-
-//Global character
-let character;
-
 //AFrame DepthKit.js wrapper entity
 AFRAME.registerComponent('depthkit', {
 
@@ -33,20 +29,17 @@ AFRAME.registerComponent('depthkit', {
   init: function () {
 
     //Create a depthkit instance
-    character = new DepthKit(this.data.type,
-                             this.data.metaPath,
-                             this.data.videoPath);
-
+    let character = new DepthKit(this.data.type,
+                                 this.data.metaPath,
+                                 this.data.videoPath);
+    //Will it loop?
     character.depthkit.setLoop(this.data.loop);
-    // character.depthkit.play();
 
     //Rotate it back to position
     character.rotation.z = THREE.Math.degToRad(90);
 
     //If autoplay is on play the take
     if(this.data.autoplay) character.depthkit.play();
-
-    this.Stop();
 
     //Set the Object3D
     this.el.setObject3D('mesh', character);
@@ -61,14 +54,13 @@ AFRAME.registerComponent('depthkit', {
    * Called when component is attached and when component data changes.
    * Generally modifies the entity based on the data.
    */
-  update: function (oldData) {
-  },
+  update: function (oldData) {},
 
   /**
    * Called when a component is removed (e.g., via removeAttribute).
    * Generally undoes all modifications to the entity.
    */
-  remove: function () { },
+  remove: function () {},
 
   /**
    * Called on each scene tick.
@@ -79,15 +71,11 @@ AFRAME.registerComponent('depthkit', {
    * Called when entity pauses.
    * Use to stop or remove any dynamic or background behavior such as events.
    */
-  pause: function () {
-    character.depthkit.stop();
-  },
+  pause: function () {},
 
   /**
    * Called when entity resumes.
    * Use to continue or add any dynamic or background behavior such as events.
    */
-  play: function () {
-    character.depthkit.play();
-  }
+  play: function () {}
 });
