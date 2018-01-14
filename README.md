@@ -7,7 +7,7 @@ An A-Frame component for rendering DepthKit volumetric videos in WebVR. The A-Fr
 ![DepthKit AFrame](https://github.com/juniorxsound/DepthKit-A-Frame/blob/master/docs/screenshot.png)
 
 ## Usage
-Start by cloning/forking the library and including ```aframe.depthkit.min.js``` from the ```./dist``` folder (make sure to clone using ```--recursive``` flag if you plan to run the examples to clone the git submodules too)
+Start by cloning/forking the repository and including ```aframe.depthkit.min.js``` from the ```./dist``` folder (make sure to clone using ```--recursive``` flag if you plan to run the examples to clone the git submodules too)
 
 The simplest way you can initialize a DepthKit video is to create a ```depthkit``` entity inside an A-Frame ```a-scene``` tag:
 ```html
