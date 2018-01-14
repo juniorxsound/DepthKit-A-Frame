@@ -23,7 +23,7 @@ Where the ```type``` attribute support ```wire/points/mesh``` for rendering diff
 ### Advanced usage
 
 ## Contribute
-PR's are welcome ✊🏻 make sure to clone using the ```git clone --recursive```.
+PRs are welcome ✊🏻 make sure to clone using the ```git clone --recursive```.
 
 ### Build system
 
