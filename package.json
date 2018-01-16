@@ -1,7 +1,7 @@
 {
   "name": "aframe-depthkit",
-  "version": "0.0.1",
-  "description": "A port of DepthKit.js volumetric video plugin to AFrame",
+  "version": "0.0.2",
+  "description": "An A-Frame component for rendering DepthKit volumetric videos in WebVR",
   "main": "src/index.js",
   "scripts": {
     "start": "concurrently \"http-server -s --cors\" \"watchify src/index.js -o dist/aframe.depthkit.js -v\"",
