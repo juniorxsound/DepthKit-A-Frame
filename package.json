@@ -1,12 +1,23 @@
 {
   "name": "aframe-depthkit",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A port of DepthKit.js volumetric video plugin to AFrame",
   "main": "src/index.js",
   "scripts": {
     "start": "concurrently \"http-server -s --cors\" \"watchify src/index.js -o dist/aframe.depthkit.js -v\"",
     "build": "browserify src/index.js | uglifyjs -mc warnings=false > dist/aframe.depthkit.min.js",
     "test": "npm run build"
+  },
+  "keywords": [
+    "aframe",
+    "three.js",
+    "volumetric",
+    "3D",
+    "depthkit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juniorxsound/DepthKit-A-Frame"
   },
   "author": "Or Fleisher <contact@orfleisher.com>",
   "license": "MIT",
